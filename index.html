@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişi VeriTabanı</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+<h1 id="ortayazi"></h1>
+<h1 id="ortayazi2"></h1>
+   
+<select id="select" onchange="changebg()">
+    <option value="photo1.jpg" data-text="PHOTO 1" data-text2="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere interdum dui quis suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et tellus ullamcorper, tincidunt eros in, dignissim ex. Mauris accumsan, orci eget lobortis tristique, lacus leo consectetur ante, posuere malesuada elit lacus vel odio. Praesent dolor magna, lacinia quis erat vel, maximus hendrerit orci. Donec bibendum dolor nec metus dignissim laoreet. Phasellus in ultricies augue. Vestibulum finibus orci ac sem feugiat eleifend. Maecenas non massa sodales, mollis tortor et, posuere tellus. Suspendisse auctor sed nunc in convallis. ">Photo 1</option>
+    <option value="photo2.jpg" data-text="PHOTO 2" data-text2="Integer fringilla mollis justo quis pulvinar. Maecenas efficitur lorem in convallis lobortis. Nam laoreet porta augue ut condimentum. Curabitur volutpat massa id odio elementum, et laoreet felis bibendum. Aenean gravida mollis tincidunt. Suspendisse potenti. Sed sed eros sit amet metus scelerisque facilisis ut vel nunc. Nunc in odio in lectus aliquet faucibus. Suspendisse vitae odio a arcu sodales tempor. Integer porta, enim at dignissim sagittis, turpis libero dictum purus, quis gravida felis lectus vitae neque. Quisque in lobortis odio. Maecenas id augue bibendum, faucibus augue vitae, aliquam ante. Aliquam vel malesuada sem. ">Photo 2</option>
+    <option value="photo3.jpg" data-text="PHOTO 3" data-text2="Curabitur faucibus, dolor et tincidunt rutrum, velit neque efficitur eros, sit amet cursus nulla dui molestie nulla. Sed quis erat tellus. Sed volutpat ac ex a fringilla. Suspendisse ultricies justo nulla, sed venenatis neque dictum ut. Pellentesque metus lacus, bibendum fringilla leo sit amet, auctor porttitor leo. Nulla pulvinar vulputate ex, sed auctor nisi. Phasellus at condimentum sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec quis nisl non nulla sollicitudin commodo. Integer ultrices faucibus volutpat. Cras sagittis sodales felis, a efficitur ex venenatis ut. Suspendisse potenti. Nulla facilisi. ">Photo 3</option>
+    <option value="photo4.jpeg" data-text="PHOTO 4" data-text2="Sed commodo est at lorem vulputate tristique. Nulla nisi felis, rhoncus non porta in, gravida ac enim. Curabitur eget metus at diam congue varius non eget enim. Praesent sagittis tellus id egestas vulputate. Fusce ac felis eget augue accumsan porta. Donec lacinia ullamcorper aliquet. Phasellus bibendum tortor et nibh maximus, eget suscipit nisl ornare. Sed eget nunc lacus. ">Photo 4</option>
+    <option value="photo5.jpeg" data-text="PHOTO 5" data-text2="Aenean dignissim at orci eget rutrum. Curabitur vulputate metus vitae volutpat finibus. Nunc dolor arcu, viverra sit amet convallis ac, ornare sit amet neque. Phasellus sed rhoncus nisl. Sed eleifend elit dapibus massa ullamcorper, eu volutpat sem ornare. Curabitur pharetra nulla sit amet ex pharetra, id sagittis elit cursus. Etiam sit amet erat commodo ipsum pulvinar volutpat at in mi. Nullam odio velit, interdum vel arcu a, cursus pellentesque sapien. Vestibulum et dui porttitor, tempus lacus in, consequat tortor. Vestibulum fringilla enim dolor, quis euismod felis posuere sed. Ut et dui ut quam consequat pulvinar id vitae magna. Donec nisi ipsum, pellentesque in nibh non, semper elementum ex. Mauris quis magna quis lorem finibus ultricies. In hac habitasse platea dictumst. Nulla magna dolor, pretium aliquet orci pretium, condimentum interdum justo. Curabitur at ligula fringilla, dignissim tellus vel, tincidunt massa. ">Photo 5</option>
+</select>
+
+<script>
+document.body.style.backgroundImage = "url(images/photo1.jpg)";
+document.body.style.backgroundSize = "100% 100%";
+document.body.style.backgroundRepeat = "no-repeat";
+
+function changebg() {
+    let select = document.getElementById("select");
+    let selectedIndex = select.selectedIndex;
+    let additionalInfo = select.options[selectedIndex].getAttribute("data-text");
+
+    let selectedIndex2 = select.selectedIndex;
+    let additionalInfo2 = select.options[selectedIndex].getAttribute("data-text2");
+
+    let bgimage = select.value;
+
+    document.body.style.backgroundImage = "url(images/" + bgimage + ")";
+    document.body.style.backgroundSize = "100% 100%";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.getElementById("ortayazi").innerHTML = additionalInfo;
+    document.getElementById("ortayazi2").innerHTML = additionalInfo2;
+};
+</script>
+
+</body>
+</html>

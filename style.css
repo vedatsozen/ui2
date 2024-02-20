@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+body {
+    text-align: center;
+    height: 100vh;
+    padding: 0px;
+    margin: auto 0;
+
+}
+
+
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  box-sizing: border-box;
+}
+
+select {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: block;
+    font-size: 20px;
+    padding: 5px;
+    font-size: 13px;
+
+}
+
+select > option {
+    height: 20px;
+    width: 100px;
+    font-size:13px;
+    padding: 5px;
+    background-color: black !important;
+    color: white;
+    cursor: pointer !important;
+}
+
+h1#ortayazi {
+    font-size: 40px;
+    letter-spacing: 4px;
+    margin: auto;
+    margin-top: 100px;
+    color: white;
+}
+
+h1#ortayazi2 {
+    font-size:14px;
+    letter-spacing: 4px;
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+    width: 70vw;
+    text-align: center;
+    line-height: 40px;
+}
